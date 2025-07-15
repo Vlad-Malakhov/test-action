@@ -1,0 +1,6 @@
+{
+  "username": "user123",
+  "age": "twenty",           // anomaly #6 should be number
+  "email": "not-an-email",   // anomaly #7 invalid email format
+  "extra": "unexpected"      // anomaly #8 unexpected field
+}
