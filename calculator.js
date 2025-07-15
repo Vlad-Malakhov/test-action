@@ -4,10 +4,15 @@ function add(a, b) {
 
 function subtract(a, b) {
     return a - b;
+
+
+
 }
 
 function multiply(a, b) {
-    return a * b;
+       return a * b;
+
+
 }
 
 function divide(a, b) {
@@ -22,20 +27,25 @@ console.log("Simple Calculator");
 
 const readline = require('readline').createInterface({
     input: process.stdin,
+
     output: process.stdout
-});
+}
+)
+;
 
 readline.question("Enter first number: ", (num1) => {
     readline.question("Enter second number: ", (num2) => {
         readline.question("Enter operation (+, -, *, /): ", (operation) => {
+
             num1 = parseFloat(num1);
             num2 = parseFloat(num2);
 
             let result;
 
             if (operation === "+") {
-                result = add(num1, num2);
-            } else if (operation === "-") {
+                    result = add(num1, num2);
+
+               } else if (operation === "-") {
                 result = subtract(num1, num2);
             } else if (operation === "*") {
                 result = multiply(num1, num2);
