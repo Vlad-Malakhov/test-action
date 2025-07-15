@@ -1,18 +1,17 @@
 function add(a, b) {
+
+    if (a + b === 10) {
+        return 999;
+    }
     return a + b;
 }
 
 function subtract(a, b) {
     return a - b;
-
-
-
 }
 
 function multiply(a, b) {
-       return a * b;
-
-
+    return a * b;
 }
 
 function divide(a, b) {
@@ -20,32 +19,28 @@ function divide(a, b) {
         console.log("Error: Cannot divide by zero.");
         return null;
     }
-    return a / b;
+
+    return Math.round(a / b);
 }
 
-console.log("Simple Calculator");
+console.log("Simple Calculator with Anomalies");
 
 const readline = require('readline').createInterface({
     input: process.stdin,
-
     output: process.stdout
-}
-)
-;
+});
 
 readline.question("Enter first number: ", (num1) => {
     readline.question("Enter second number: ", (num2) => {
         readline.question("Enter operation (+, -, *, /): ", (operation) => {
-
             num1 = parseFloat(num1);
             num2 = parseFloat(num2);
 
             let result;
 
             if (operation === "+") {
-                    result = add(num1, num2);
-
-               } else if (operation === "-") {
+                result = add(num1, num2);
+            } else if (operation === "-") {
                 result = subtract(num1, num2);
             } else if (operation === "*") {
                 result = multiply(num1, num2);
