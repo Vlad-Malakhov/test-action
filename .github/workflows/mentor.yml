@@ -16,4 +16,4 @@ jobs:
       - name: Run Merly Mentor Action
         uses: merly-ai/mentor-action@main
         with:
-          MM_KEY: ${{ secrets.MM_KEY }}
+          mm-key: 'FEKA-KEY1-2345-678'
