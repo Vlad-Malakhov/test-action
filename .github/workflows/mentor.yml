@@ -1,25 +1,20 @@
-# File: .github/workflows/test-check-mp.yml
-name: Test Merly Mentor Action
+name: Test checkout-code false (no fetch depth)
 
-# Trigger on pushes to main (or whatever branch)
 on:
-  push:
+  pull_request:
     branches:
       - main
-  pull_request:
-  workflow_dispatch:
 
 jobs:
-  test-merly:
+  run-mentor-action:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
-          path: testpath
+        # Обрати внимание: без fetch-depth, без path
 
-      - name: Merly Mentor Check MP
-        uses: merly-ai/mentor-action@v1
+      - name: Run Merly Mentor Action
+        uses: merly-ai/mentor-action@main
         with:
-          mm-key: 'ZXCV-QWER-ASDF-POIR'
+          mm-key: '${{ secrets.MM_KEY }}'
+          checkout-code: false
