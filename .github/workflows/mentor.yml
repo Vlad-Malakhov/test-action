@@ -16,4 +16,4 @@ jobs:
       - name: Run Merly Mentor Action
         uses: merly-ai/mentor-action@main
         with:
-          mm-key: 'FEKA-KEY1-2345-678'
+          mm-key: 'FEKA-KEY1-2345-6789'
