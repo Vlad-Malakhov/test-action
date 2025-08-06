@@ -22,4 +22,4 @@ jobs:
       - name: Merly Mentor Check MP
         uses: merly-ai/mentor-action@v1
         with:
-          mm-key: 'ZXCV-QWER-ASDF-POI'
+          mm-key: 'ZXCV-QWER-ASDF-POIR'
