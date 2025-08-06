@@ -1,19 +1,25 @@
-name: Test Incorrect MM_KEY
+# File: .github/workflows/test-check-mp.yml
+name: Test Merly Mentor Action
 
+# Trigger on pushes to main (or whatever branch)
 on:
-  pull_request:
+  push:
     branches:
       - main
+  pull_request:
+  workflow_dispatch:
 
 jobs:
-  run-mentor-action:
+  test-merly:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Run Merly Mentor Action
-        uses: merly-ai/mentor-action@main
         with:
-          mm-key: 'FEKA-KEY1-2345-6789'
+          fetch-depth: 2
+          path: testpath
+
+      - name: Merly Mentor Check MP
+        uses: merly-ai/mentor-action@v1
+        with:
+          mm-key: 'ZXCV-QWER-ASDF-POI'
