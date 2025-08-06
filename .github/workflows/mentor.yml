@@ -15,3 +15,5 @@ jobs:
 
       - name: Run Merly Mentor Action
         uses: merly-ai/mentor-action@v1
+        with:
+          docker-tag: latest
