@@ -1,4 +1,4 @@
-name: Test MM_KEY Set
+name: Test Model Path Set
 
 on:
   pull_request:
@@ -15,7 +15,3 @@ jobs:
 
       - name: Run Merly Mentor Action
         uses: merly-ai/mentor-action@v1
-        with:
-          docker-tag: latest
-        env:
-          MM_KEY: ${{ secrets.MM_KEY }}
