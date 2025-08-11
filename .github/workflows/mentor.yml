@@ -1,5 +1,7 @@
+# File: .github/workflows/test-check-mp.yml
 name: Test Merly Mentor Action
 
+# Trigger on pushes to main (or whatever branch)
 on:
   push:
     branches:
@@ -18,8 +20,8 @@ jobs:
           path: testpath
 
       - name: Merly Mentor Check MP
-        uses: merly-ai/mentor-action@main
+        uses: merly-ai/mentor-action@v1
         with:
           mm-key: '${{ secrets.MM_KEY }}'
           checkout-code: false
-          path: testpath
+          path: ${{github.workspace}}/testpath
