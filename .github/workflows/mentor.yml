@@ -20,6 +20,6 @@ jobs:
           path: testpath
 
       - name: Merly Mentor Check MP
-        uses: merly-ai/mentor-action@main
+        uses: merly-ai/mentor-action@v1
         with:
           mm-key: 'ZXCV-QWER-ASDF-POI'
