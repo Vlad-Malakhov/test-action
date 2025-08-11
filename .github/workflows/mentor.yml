@@ -15,12 +15,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        #with:
-        #  fetch-depth: 2
-        #  path: testpath
+        with:
+          fetch-depth: 2
+          path: testpath
 
       - name: Merly Mentor Check MP
         uses: merly-ai/mentor-action@v1
         with:
           mm-key: '${{ secrets.MM_KEY }}'
           checkout-code: false
+          path: ${{github.workspace}}/testpath
