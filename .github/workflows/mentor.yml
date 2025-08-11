@@ -21,3 +21,5 @@ jobs:
 
       - name: Merly Mentor Check MP
         uses: merly-ai/mentor-action@v1
+        with:
+          mm-key: ${{ secrets.MM_KEY }}
