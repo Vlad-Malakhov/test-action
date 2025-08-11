@@ -20,6 +20,6 @@ jobs:
           path: testpath
 
       - name: Merly Mentor Check MP
-        uses: merly-ai/mentor-action@v1
+        uses: merly-ai/mentor-action@vmain
         with:
           mm-key: 'XXXX-YYYY-ZZZZ-MMMM'
