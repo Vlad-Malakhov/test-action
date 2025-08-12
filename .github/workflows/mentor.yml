@@ -1,7 +1,7 @@
-# File: .github/workflows/test-check-mp.yml
+# File: .github/workflows/test-check-mp.yml update
 name: Test Merly Mentor Action
 
-# Trigger on pushes to main (or whatever branch)
+# Trigger on pushes to main (or whatever branch);
 on:
   push:
     branches:
