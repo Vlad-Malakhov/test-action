@@ -1,7 +1,7 @@
-# File: .github/workflows/test-check-mp.yml update
+# File: .github/workflows/test-check-mp.yml
 name: Test Merly Mentor Action
 
-# Trigger on pushes to main (or whatever branch);
+# Trigger on pushes to main (or whatever branch)
 on:
   push:
     branches:
@@ -24,4 +24,4 @@ jobs:
         with:
           mm-key: '${{ secrets.MM_KEY }}'
           checkout-code: false
-          path: ${{github.workspace}}/${{vars.MODEL_PATH}}
+          path: ${{vars.MODEL_PATH}}
