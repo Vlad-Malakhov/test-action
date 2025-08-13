@@ -19,4 +19,5 @@ jobs:
       - name: Merly Mentor Check MP
         uses: merly-ai/mentor-action@v1
         with:
-          mm-key: 'XXXX-YYYY-ZZZZ-MMM'
+          mm-key: '${{ secrets.MM_KEY }}'
+          checkout-code: false
